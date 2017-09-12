@@ -1,2 +1,4 @@
 # mydotfiles
-Repository for my dotfiles
+Repository for my dotfiles:
+* bash
+* vim
