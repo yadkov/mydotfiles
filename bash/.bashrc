@@ -22,7 +22,7 @@ PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \[\033[01;36m\][$(jobcount)] \$\[\03
 export EDITOR=vim
 
 # needed for custom shortcuts
-if [ command -v xbindkeys ]
+if [ "command -v xbindkeys" ]
 then
 	xbindkeys
 fi
@@ -61,27 +61,27 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 #this section is for having persistent history on my bash
 # copied from http://eli.thegreenplace.net/2013/06/11/keeping-persistent-history-in-bash
 
-log_bash_persistent_history()
-{
-  local rc=$?
-  [[ $(history 1) =~ ^\ *[0-9]+\ +([^\ ]+\ [^\ ]+)\ +(.*)$ ]]
-  local date_part="${BASH_REMATCH[1]}"
-  local command_part="${BASH_REMATCH[2]}"
-  if [ "$command_part" != "$PERSISTENT_HISTORY_LAST" ]
-  then
-    echo $date_part "|" "$command_part" >> ~/.persistent_history
-    export PERSISTENT_HISTORY_LAST="$command_part"
-  fi
-}
-
-# Stuff to do on PROMPT_COMMAND
-run_on_prompt_command()
-{
-    log_bash_persistent_history
-}
-
-# history -a is to append it to history
-PROMPT_COMMAND="history -a;run_on_prompt_command"
+#log_bash_persistent_history()
+#{
+#  local rc=$?
+#  [[ $(history 1) =~ ^\ *[0-9]+\ +([^\ ]+\ [^\ ]+)\ +(.*)$ ]]
+#  local date_part="${BASH_REMATCH[1]}"
+#  local command_part="${BASH_REMATCH[2]}"
+#  if [ "$command_part" != "$PERSISTENT_HISTORY_LAST" ]
+#  then
+#    echo $date_part "|" "$command_part" >> ~/.persistent_history
+#    export PERSISTENT_HISTORY_LAST="$command_part"
+#  fi
+#}
+#
+## Stuff to do on PROMPT_COMMAND
+#run_on_prompt_command()
+#{
+#    log_bash_persistent_history
+#}
+#
+## history -a is to append it to history
+#PROMPT_COMMAND="history -a;run_on_prompt_command"
 
 
 ################################################################################
