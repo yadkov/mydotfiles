@@ -2,7 +2,7 @@ set showmatch
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-execute pathogen#infect()
+" execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
