@@ -6,6 +6,10 @@ filetype off                  " required
 syntax on
 filetype plugin indent on
 
+" yaml file editing
+autocmd FileType yaml setlocal ts=2 sw=2 et
+autocmd FileType yml setlocal ts=2 sw=2 et
+
 " easy buffer switching https://vi.stackexchange.com/a/9159
 nnoremap <leader>b :buffers<CR>:buffer<space>
 
