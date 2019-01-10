@@ -1,0 +1,130 @@
+# For the benefit of emacs users: -*- shell-script -*-
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 1.8.5
+#
+# If you edit this file, do not forget to uncomment any lines
+# that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+
+# By defaults, xbindkeys does not pay attention with the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+# Examples of commands:
+
+"xbindkeys_show" 
+  control+shift + q
+
+# set directly keycode (here control + f with my keyboard)
+#"xterm"
+#  c:41 + m:0x4
+
+# specify a mouse button
+#"xterm"
+#  control + b:2
+
+#"killall xbindkeys && xdotool type `date`"
+#"sleep 1 && bash echo test"
+# dnes
+"sleep 0.2 && xdotool type --delay 15 `date +%d-%m-%Y`"
+     control + 0 
+# dnes +1
+"sleep 0.2 && xdotool type --delay 15 `date --date='1 day' +%d-%m-%Y`"
+     control + 1 
+# dnes -1
+"sleep 0.2 && xdotool type --delay 15 `date --date='1 day ago' +'%d-%m-%Y'`"
+     control + shift + 1 
+# dnes +2
+"sleep 0.2 && xdotool type --delay 15 `date --date='2 days' +'%d-%m-%Y'`"
+     control + 2 
+# dnes -2
+"sleep 0.2 && xdotool type --delay 15 `date --date='2 days ago' +'%d-%m-%Y'`"
+     control + shift + 2 
+# dnes +3
+"sleep 0.2 && xdotool type --delay 15 `date --date='3 days' +'%d-%m-%Y'`"
+     control + 3 
+# dnes -3
+"sleep 0.2 && xdotool type --delay 15 `date --date='3 days ago' +'%d-%m-%Y'`"
+     control + shift + 3 
+# dnes +4
+"sleep 0.2 && xdotool type --delay 15 `date --date='4 days' +'%d-%m-%Y'`"
+     control + 4 
+# dnes -4
+"sleep 0.2 && xdotool type --delay 15 `date --date='4 days ago' +'%d-%m-%Y'`"
+     control + shift + 4 
+# dnes +5
+"sleep 0.2 && xdotool type --delay 15 `date --date='5 days' +'%d-%m-%Y'`"
+     control + 5 
+# dnes -5
+"sleep 0.2 && xdotool type --delay 15 `date --date='5 days ago' +'%d-%m-%Y'`"
+     control + shift + 5 
+# dnes +6
+"sleep 0.2 && xdotool type --delay 15 `date --date='6 days' +'%d-%m-%Y'`"
+     control + 6 
+# dnes -6
+"sleep 0.2 && xdotool type --delay 15 `date --date='6 days ago' +'%d-%m-%Y'`"
+     control + shift + 6 
+# dnes +7
+"sleep 0.2 && xdotool type --delay 15 `date --date='7 days' +'%d-%m-%Y'`"
+     control + 7 
+# dnes -7
+"sleep 0.2 && xdotool type --delay 15 `date --date='7 days ago' +'%d-%m-%Y'`"
+     control + shift + 7 
+# dnes +8
+"sleep 0.2 && xdotool type --delay 15 `date --date='8 days' +'%d-%m-%Y'`"
+     control + 8 
+# dnes -8
+"sleep 0.2 && xdotool type --delay 15 `date --date='8 days ago' +'%d-%m-%Y'`"
+     control + shift + 8 
+# dnes +9
+"sleep 0.2 && xdotool type --delay 15 `date --date='9 days' +'%d-%m-%Y'`"
+     control + 9 
+# dnes -9
+"sleep 0.2 && xdotool type --delay 15 `date --date='9 days ago' +'%d-%m-%Y'`"
+     control + shift + 9 
+       #Control+Mod2 + slash 
+#"xterm -geom 50x20+20+20"
+#   Shift+Mod2+alt + s
+#
+## set directly keycode (here control+alt+mod2 + f with my keyboard)
+#"xterm"
+#  alt + c:0x29 + m:4 + mod2
+#
+## Control+Shift+a  release event starts rxvt
+#"rxvt"
+#  release+control+shift + a
+#
+## Control + mouse button 2 release event starts rxvt
+#"rxvt"
+#  Control + b:2 + Release
+
+##################################
+# End of xbindkeys configuration #
+##################################
