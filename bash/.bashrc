@@ -85,6 +85,12 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 
 ################################################################################
+# git
+alias gs='git status'
+alias ga='git add'
+alias gcm='git commit -m'
+
+################################################################################
 # aliases
 alias ll="ls -la --group-directories-first"
 alias jazz='rhythmbox-client --play-uri=http://streaming.radionomy.com/101SMOOTHJAZZ?lang=en-US%2cen%3bq%3d0.5'
