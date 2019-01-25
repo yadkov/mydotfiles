@@ -19,6 +19,7 @@ PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \[\033[01;36m\][$(jobcount)] \$\[\03
 
 ################################################################################
 # some defaults
+export PATH=$PATH:~/.local/bin
 export EDITOR=vim
 
 # needed for custom shortcuts
