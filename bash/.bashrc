@@ -1,4 +1,5 @@
 # .bashrc
+[ -z "$PS1" ] && return
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -93,7 +94,7 @@ alias gcm='git commit -m'
 
 ################################################################################
 # aliases
-alias ll="ls -la --group-directories-first"
+alias ll="ls -la --group-directories-first --color=auto"
 #alias jazz='rhythmbox-client --play-uri=http://streaming.radionomy.com/101SMOOTHJAZZ?lang=en-US%2cen%3bq%3d0.5'
 alias jazz='flatpak run org.videolan.VLC http://streaming.radionomy.com/101SMOOTHJAZZ?lang=en-US%2cen%3bq%3d0.5 --daemon'
 alias myip='curl eth0.me'
