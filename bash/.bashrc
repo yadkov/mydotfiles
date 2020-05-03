@@ -15,7 +15,6 @@ function jobcount {
    echo -n "${running}r/${stopped}s"
 }
 
-PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \[\033[01;36m\][$(jobcount)] \$\[\033[00m\] '
 
 
 ################################################################################
@@ -53,10 +52,16 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 ################################################################################
 # git
+source /usr/share/git-core/contrib/completion/git-prompt.sh
+
 alias gs='git status'
 alias ga='git add'
 alias gcm='git commit -m'
 alias gf='git diff'
+
+# ref. https://git-scm.com/book/id/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \[\033[01;36m\][$(jobcount)] $(__git_ps1 " (%s)")\$\[\033[00m\] '
 
 ################################################################################
 # aliases
