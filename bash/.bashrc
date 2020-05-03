@@ -56,6 +56,7 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 alias gs='git status'
 alias ga='git add'
 alias gcm='git commit -m'
+alias gf='git diff'
 
 ################################################################################
 # aliases
