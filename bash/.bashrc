@@ -66,7 +66,8 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \[\033[01;36m\][$(jobcount)] 
 ################################################################################
 # aliases
 alias ll="ls -la --group-directories-first --color=auto"
-alias jazz='vlc http://streaming.radionomy.com/101SMOOTHJAZZ?lang=en-US%2cen%3bq%3d0.5 --daemon'
+alias jazz='vlc https://listen.radiocoalition.org/b22139_128mp3 --daemon'
+#alias jazz='vlc http://streaming.radionomy.com/101SMOOTHJAZZ?lang=en-US%2cen%3bq%3d0.5 --daemon'
 alias myip='curl eth0.me'
 #alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias usd='curl -s www.bnb.bg | grep USD | awk -F'"'"'[<|>]'"'"' '"'"'{ print $11 }'"'"' | awk '"'"'{ print $1 }'"'"
