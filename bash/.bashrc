@@ -45,6 +45,7 @@ bind -m vi-insert "\C-l":clear-screen
 # set to never delete history
 export HISTSIZE=-1
 export HISTFILESIZE=-1
+export HISTTIMEFORMAT="%F %T "
 
 # auto append every command in the history file - https://askubuntu.com/a/67306
 shopt -s histappend
