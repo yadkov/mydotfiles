@@ -26,3 +26,8 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+" for kubernetes
+set tabstop=2
+set expandtab
+set shiftwidth=2
