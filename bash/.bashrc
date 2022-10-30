@@ -80,11 +80,25 @@ if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
 fi
 
 ################################################################################
+# google cloud
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+if [ -f $HOME/.googlerc ]; then
+  source $HOME/.googlerc
+fi
+
+################################################################################
 # kubectl
 source <(kubectl completion bash)
 alias k=kubectl
 complete -o default -F __start_kubectl k
+if [ -f /opt/kube-ps1/kube-ps1.sh ]; then
+  source /opt/kube-ps1/kube-ps1.sh
+  export PS1='$(kube_ps1)'-$PS1
+fi
 
 ################################################################################
 # terraform
 alias tf=terraform
+export PATH="$HOME/.tfenv/bin:$PATH"
+
+. <(flux completion bash)
