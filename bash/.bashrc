@@ -68,7 +68,7 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \[\033[01;36m\][$(jobcount)] 
 # aliases
 alias ll="ls -la --group-directories-first --color=auto"
 #alias jazz='vlc https://listen.radiocoalition.org/b22139_128mp3 --daemon'
-alias jazz='vlc http://stream18.shoutcastsolutions.com:8227 --daemon'
+alias jazz='vlc https://bcast.vigormultimedia.com:48888/sjcompl192aac --daemon'
 alias jazzfm='vlc http://live.btvradio.bg/jazz-fm.mp3 --daemon'
 alias myip='curl eth0.me'
 #alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
