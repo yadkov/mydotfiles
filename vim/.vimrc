@@ -31,3 +31,7 @@ noremap <Right> <Nop>
 set tabstop=2
 set expandtab
 set shiftwidth=2
+
+" set line and columan
+set cursorcolumn
+set cursorline
